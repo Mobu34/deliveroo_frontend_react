@@ -6,12 +6,117 @@ body {
   font-family: "Roboto", sans-serif;
 }
 .container {
-  width: 1024px;
+  width: 1200px;
   margin: auto;
+}
+h1 {
+  font-size: 30px;
+  font-weight: 700;
 }
 
 /* HEADER */
 header {
-  background-color: aquamarine;
-  height: 80px;
+  margin-bottom: 20px;
+}
+
+/* MAIN */
+/* section restaurant */
+.restaurant {
+  display: flex;
+}
+h1 {
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+  color: #888c8c;
+}
+.photo {
+  width: 350px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+/* section menu */
+.container-menu {
+  display: flex;
+  margin-top: 50px;
+}
+.menu {
+  flex: 2.5;
+  margin-right: 20px;
+}
+.category:not(:last-child) {
+  margin-bottom: 50px;
+}
+.container-meal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* margin-right: 20px; */
+}
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.meal {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  cursor: pointer;
+}
+h4 {
+  font-size: 18px;
+  font-size: 300;
+  margin-bottom: 10px;
+}
+.meal-details {
+  margin-bottom: 50px;
+}
+.meal-details > p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  word-break: break-all;
+}
+.meal-details > p,
+.meal-details > span {
+  color: #888c8c;
+}
+.meal-details > span > strong {
+  color: #fb7f00;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.picture {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.basket {
+  flex: 1;
+}
+.empty-basket,
+.filled-basket {
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+.empty-basket {
+  background-color: #bac3c3;
+  color: #8b999b;
+  cursor: not-allowed;
+}
+.filled-basket {
+  background-color: #28cdbd;
+  color: #fff;
+  cursor: pointer;
 }
