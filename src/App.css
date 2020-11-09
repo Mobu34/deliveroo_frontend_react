@@ -5,3 +5,13 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+.container {
+  width: 1024px;
+  margin: auto;
+}
+
+/* HEADER */
+header {
+  background-color: aquamarine;
+  height: 80px;
+}

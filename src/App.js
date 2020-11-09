@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 
+import Header from "./components/Header";
+
 const App = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +20,7 @@ const App = () => {
 
   return (
     <div className="container">
-      Hello from <a href="https://www.lereacteur.io">Le Reacteur !</a>
+      <Header />
     </div>
   );
 };
