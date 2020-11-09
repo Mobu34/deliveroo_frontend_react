@@ -16,7 +16,9 @@ const App = () => {
   const [basket, setBasket] = useState([]);
 
   const fetchData = async () => {
-    const response = await axios.get("http://localhost:3001/");
+    const response = await axios.get(
+      "https://deliveroo-backend-react.herokuapp.com/"
+    );
     setData(response.data);
     setIsLoading(false);
   };
