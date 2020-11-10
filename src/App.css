@@ -4,6 +4,7 @@
 /* GLOBAL */
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #f3f5f5;
 }
 .container {
   width: 1200px;
@@ -16,11 +17,16 @@ h1 {
 
 /* HEADER */
 header {
-  margin-bottom: 20px;
+  border-bottom: solid 1px #bac3c3;
+  background-color: #fff;
 }
 
 /* MAIN */
 /* section restaurant */
+.container-restaurant {
+  background-color: #fff;
+  padding: 30px 0;
+}
 .restaurant {
   display: flex;
 }
@@ -42,7 +48,7 @@ h3 {
 /* section menu */
 .container-menu {
   display: flex;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .menu {
   flex: 2.5;
@@ -55,7 +61,6 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* margin-right: 20px; */
 }
 h2 {
   font-size: 24px;
@@ -66,19 +71,26 @@ h2 {
   justify-content: space-between;
   width: 400px;
   cursor: pointer;
+  background-color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 10px 0;
+  height: 140px;
+}
+.meal:hover {
+  box-shadow: 3px 3px 3px 3px #bac3c3;
+  transition: 0.3s;
 }
 h4 {
   font-size: 18px;
   font-size: 300;
   margin-bottom: 10px;
 }
-.meal-details {
-  margin-bottom: 50px;
-}
+
 .meal-details > p {
   font-size: 14px;
   margin-bottom: 10px;
-  word-break: break-all;
 }
 .meal-details > p,
 .meal-details > span {
@@ -100,6 +112,13 @@ h4 {
 
 .basket {
   flex: 1;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  height: 100%;
+  font-weight: 300;
+  position: sticky;
+  top: 20px;
 }
 .empty-basket,
 .filled-basket {
@@ -109,14 +128,51 @@ h4 {
   border: none;
   font-size: 18px;
   font-weight: 500;
+  margin-bottom: 20px;
 }
 .empty-basket {
   background-color: #bac3c3;
   color: #8b999b;
   cursor: not-allowed;
 }
+.empty {
+  text-align: center;
+  margin: 30px 0;
+}
 .filled-basket {
   background-color: #28cdbd;
   color: #fff;
   cursor: pointer;
+}
+.sub-basket-container,
+.delivery-charge {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #bac3c3;
+  padding-bottom: 20px;
+}
+.sub-basket,
+.sub-total,
+.delivery-charge,
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub-basket > div > span:nth-child(2) {
+  margin-left: 10px;
+}
+.edit-basket {
+  color: #28cdbd;
+  font-size: 10px;
+  border: 2px solid #28cdbd;
+  border-radius: 50%;
+  padding: 2px;
+}
+.sub-total,
+.sub-basket:not(:last-child) {
+  margin-bottom: 20px;
+}
+.total {
+  font-size: 20px;
+  font-weight: 500;
 }

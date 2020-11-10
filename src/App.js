@@ -16,9 +16,7 @@ const App = () => {
   const [basket, setBasket] = useState([]);
 
   const fetchData = async () => {
-    const response = await axios.get(
-      "https://deliveroo-backend-react.herokuapp.com/"
-    );
+    const response = await axios.get("http://localhost:3001/");
     setData(response.data);
     setIsLoading(false);
   };
@@ -28,8 +26,9 @@ const App = () => {
   }, []);
 
   return (
-    <div className="container">
+    <>
       <Header />
+
       {isLoading ? (
         <span>En cours de chargement...</span>
       ) : (
@@ -41,7 +40,7 @@ const App = () => {
           setBasket={setBasket}
         />
       )}
-    </div>
+    </>
   );
 };
 

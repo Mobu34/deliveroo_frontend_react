@@ -4,11 +4,13 @@ import logoDeliveroo from "../assets/img/logo-deliveroo.svg";
 const Header = () => {
   return (
     <header>
-      <img
-        src={logoDeliveroo}
-        alt="logo-deliveroo"
-        className="logo-deliveroo"
-      />
+      <div className="container">
+        <img
+          src={logoDeliveroo}
+          alt="logo-deliveroo"
+          className="logo-deliveroo"
+        />
+      </div>
     </header>
   );
 };

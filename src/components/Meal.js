@@ -7,15 +7,29 @@ const Meal = ({ index, meal, total, setTotal, basket, setBasket }) => {
     setTotal(total + price);
 
     const newBasket = [...basket];
-    newBasket.push({ name: meal.title, price: meal.price, quantity: 1 });
-    setBasket(newBasket);
+    if (newBasket.length === 0) {
+      newBasket.push({ name: meal.title, price: meal.price, quantity: 1 });
+      setBasket(newBasket);
+    } else {
+      for (let i = 0; i < newBasket.length; i++) {
+        if (newBasket[i].name === meal.title) {
+          newBasket[i].quantity = newBasket[i].quantity + 1;
+          setBasket(newBasket);
+          break;
+        } else if (i === newBasket.length - 1) {
+          newBasket.push({ name: meal.title, price: meal.price, quantity: 1 });
+          setBasket(newBasket);
+          break;
+        }
+      }
+    }
   };
 
   return (
     <div className="meal" onClick={handleClick}>
       <div className="meal-details">
         <h4>{meal.title}</h4>
-        <p>{meal.description}</p>
+        <p>{meal.description.slice(0, 100)}</p>
         <span>
           {meal.price} €{" "}
           <strong>
